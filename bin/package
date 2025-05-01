@@ -85,6 +85,9 @@ pip install -U PyInstaller
 # Ran into ModuleNotFoundError: No module named 'pkg_resources.py2_warn' with higher versions of setuptools
 pip install --upgrade setuptools
 
+echo "Reinstalling urllib3"
+pip install --upgrade --force-reinstall urllib3
+
 # Get version
 VERSION=$(python -c "
 import gdc_client.version
